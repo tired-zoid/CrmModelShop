@@ -49,7 +49,6 @@ namespace CrmUI
             }
         }
 
-
         private void button2_Click(object sender, EventArgs e)
         {
             var id = dataGridView.SelectedRows[0].Cells[0].Value;
@@ -102,6 +101,7 @@ namespace CrmUI
         {
 
         }
+      
         private void Update(int id, Type type)
         {
 

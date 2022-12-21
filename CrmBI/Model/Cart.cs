@@ -8,6 +8,7 @@ namespace CrmBI.Model
     {
         public Customer Customer { get; set; }
         public Dictionary<Product,int> Products { get; set; }
+       
         public Cart(Customer customer)
         {
             Customer = customer;
@@ -35,6 +36,7 @@ namespace CrmBI.Model
                 }
             }
         }
+        
         public List<Product> GetAll()
         {
             var result = new List<Product>();
