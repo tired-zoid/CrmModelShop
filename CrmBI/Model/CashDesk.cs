@@ -12,22 +12,26 @@ namespace CrmBI.Model
         public int Number { get; set; }
         public Seller Seller { get; set; }
         public Queue<Cart> Queue { get; set; }
-        public int MaxQueueLength { get; set; } = 10;
+        public int MaxQueueLength { get; set; }
         public int ExitCustomer { get; set; }
         public bool IsModel { get; set; }
 
         public int Count => Queue.Count;
+
+        public event EventHandler<Check> CheckClosed;
+
         public CashDesk(int number, Seller seller)
         {
             Number = number;
             Seller = seller;
             Queue = new Queue<Cart>();
             IsModel = true;
+            MaxQueueLength = 10;
         }
 
         public void Enqueue(Cart cart)
         {
-            if(Queue.Count <= MaxQueueLength)
+            if(Queue.Count < MaxQueueLength)
             {
                 Queue.Enqueue(cart);
             }
@@ -89,13 +93,20 @@ namespace CrmBI.Model
                         sum += product.Price;
                     }
                 }
+
+                check.Price = sum;
                 if (!IsModel)
                 {
                     db.SaveChanges();
                 }
-
+                CheckClosed?.Invoke(this, check);
             }
             return sum;
+        }
+
+        public override string ToString()
+        {
+            return $"Касса №{Number}";
         }
     }
 }
