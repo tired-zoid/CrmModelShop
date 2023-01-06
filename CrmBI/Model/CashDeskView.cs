@@ -55,6 +55,7 @@ namespace CrmBI.Model
 
         private void CashDesk_CheckClosed(object sender, Check e)
         {
+            
             Price.Invoke((Action)delegate 
             {
                 Price.Value += e.Price;

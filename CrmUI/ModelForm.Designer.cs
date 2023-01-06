@@ -49,7 +49,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(668, 12);
+            this.numericUpDown1.Location = new System.Drawing.Point(668, 37);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -72,7 +72,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(668, 56);
+            this.numericUpDown2.Location = new System.Drawing.Point(668, 82);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -96,20 +96,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(564, 17);
+            this.label1.Location = new System.Drawing.Point(587, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(201, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Client speed";
+            this.label1.Text = "Скорость задержки клиентов";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(549, 58);
+            this.label2.Location = new System.Drawing.Point(619, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 17);
+            this.label2.Size = new System.Drawing.Size(169, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Cashdesk speed";
+            this.label2.Text = "Скорость задержки касс";
             // 
             // ModelForm
             // 
